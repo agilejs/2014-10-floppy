@@ -6,6 +6,13 @@ function AppCtrl ($scope, $location) {
     };
 }
 
+function SortController ($scope, $location) {
+    'use strict';
+    $scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
+}
+
 function WelcomeCtrl ($scope, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
