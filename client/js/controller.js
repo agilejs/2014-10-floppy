@@ -4,15 +4,16 @@ function AppCtrl ($scope) {
 }
 
 function WelcomeCtrl ($scope, moviesResponse) {
-   'use strict';
+    'use strict';
     $scope.movies = moviesResponse.data;
 }
+
 WelcomeCtrl.resolve = {
-      moviesResponse: function ($http) {
+    moviesResponse: function ($http) {
         'use strict';
         return $http.get('/movies');
     }
-}
+};
 
 function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
