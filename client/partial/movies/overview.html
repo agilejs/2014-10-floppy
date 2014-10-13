@@ -1,7 +1,8 @@
-<table class="table table-striped table-hover ng-controller="SortController">
+<table class="table table-striped table-hover" ng-controller="SortController">
     <thead>
         <tr>
-            <a ng-click="sort='title'; reverse=!reverse">Title</a>
+            <th><a ng-click="sort='title'; reverse=!reverse">Title</a></th>
+            <th><a ng-click="sort='year'; reverse=!reverse">Year</a></th>
         </tr>
     </thead>
     <tbody>
@@ -9,6 +10,11 @@
             <td>
                 <a href="#" ng-href="/movies/{{movie.id}}">
                     {{movie.title}}
+                </a>
+            </td>
+             <td>
+                <a href="#" ng-href="/movies/{{movie.id}}">
+                    {{movie.year}}
                 </a>
             </td>
         </tr>
